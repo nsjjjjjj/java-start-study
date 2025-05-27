@@ -1,38 +1,34 @@
 package static2.ex;
 
 public class MathArrayUtils {
-    private MathArrayUtils() {
-        //실수 생성 방지
+    public static int sum(int[] values) {
+        int sum = 0;
+        for (int value : values) {
+            sum += value;
+        }
+        return sum;
     }
 
-    public static int sum(int[] values) {
-        int total = 0;
-        for( int value : values) {
-            total += value;
-        }
-        return total;
-    }
     public static double average(int[] values) {
-        return (double) sum(values)/values.length;
+        return (double)sum(values) / values.length;
     }
 
     public static int min(int[] values) {
-        int minValue = values[0];
-        for(int value : values) {
-            if(value < minValue) {
-                minValue = value;
+        int min = values[0];
+        for (int value : values) {
+            if (value < min) {
+                min = value;
             }
         }
-        return minValue;
+        return min;
     }
     public static int max(int[] values) {
-        int maxValue = values[0];
-        for(int value : values) {
-            if(value > maxValue) {
-                maxValue = value;
+        int max = values[0];
+        for (int value : values) {
+            if (value > max) {
+                max = value;
             }
         }
-        return maxValue;
+        return max;
     }
-
 }
