@@ -12,5 +12,10 @@ public class CarMain {
         gasCar.move();
         gasCar.fillUp();
         gasCar.openDoor();
+
+        HydrogenCar hydrogenCar = new HydrogenCar();
+        hydrogenCar.move();
+        hydrogenCar.fillHydrogen();
+        hydrogenCar.openDoor();
     }
 }
